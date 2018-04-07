@@ -5,7 +5,7 @@
     <groupId>com.kuvshinov</groupId>
     <artifactId>mongeese-maven-plugin</artifactId>
     <version>0.0.1-SPANSHOT</version>
-    <url>http://kuvshinov.com</url>
+    <url>https://github.com/kuvshinov/mongeese</url>
 
 
     <properties>
