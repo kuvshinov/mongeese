@@ -1,0 +1,6 @@
+mongoUri: mongodb://localhost:27017
+changes:
+  - id: my_first_change
+    author: Sergey Kuvshinov
+    database: mongeese
+    scriptFile: scripts/test.js
