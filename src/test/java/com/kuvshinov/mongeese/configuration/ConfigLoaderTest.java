@@ -24,10 +24,11 @@ public class ConfigLoaderTest {
         URL resource = this.getClass().getResource("/config.example.yml");
         MongeeseConfiguration configuration = ConfigLoader.load(Paths.get(resource.toURI()).toString());
         Assert.assertNotNull(configuration);
+        Assert.assertNotNull(configuration.getMongoUri());
         Assert.assertNotNull(configuration.getChanges());
         Assert.assertEquals(1, configuration.getChanges().size());
 
-        MongeeseConfiguration.ConfigEntry entry = configuration.getChanges().get(0);
+        ChangeSet entry = configuration.getChanges().get(0);
         Assert.assertEquals("my_first_change", entry.getId());
         Assert.assertEquals("Sergey Kuvshinov", entry.getAuthor());
         Assert.assertEquals("mongeese", entry.getDatabase());
